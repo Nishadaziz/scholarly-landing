@@ -4,8 +4,8 @@ import { COURSES } from "../data/courses";
 
 import CourseHero from "../components/course/CourseHero";
 import LanguageToggle from "../components/course/LanguageToggle";
-import GuidelineList from "../components/course/GuidelineList";
-import OutlineGrid from "../components/course/OutlineGrid";
+import CourseOutcome from "../components/course/CourseOutcome";
+import CourseScheduleCards from "../components/course/CourseScheduleCards";
 import FAQSection from "../components/course/FAQSection";
 import CheckoutBox from "../components/course/CheckoutBox";
 import SupportHighlight from "../components/course/SupportHighlight";
@@ -33,15 +33,10 @@ export default function CourseDetails() {
 
   const t = (obj) => obj?.[lang] ?? "";
 
-  const outlineCards = (course.outlineCards || []).map((c) => ({
-  title: t(c.title),
-  desc: t(c.desc),
-}));
-
   return (
     <section className="w-full bg-[#0b1220] py-16">
       <div className="mx-auto w-[95%] max-w-7xl">
-        <div className="rounded-3xl border border-gray-200 bg-white p-6 md:p-10 shadow-sm">
+        <div className="rounded-3xl border border-gray-200 bg-white p-6 md:p-10 shadow-sm space-y-12">
           <CourseHero
             image={course.heroImage}
             title={t(course.title)}
@@ -50,38 +45,32 @@ export default function CourseDetails() {
 
           <LanguageToggle lang={lang} setLang={setLang} />
 
-          <GuidelineList
-            title={lang === "bn" ? "কোর্স গাইডলাইন" : "Course Guideline"}
-            items={course.guideline[lang] || []}
-          />
-           <SupportHighlight lang={lang} />
+          {/* ✅ OUTCOME (NOT OUTLINE) */}
+         <CourseScheduleCards items={course.schedule?.[lang] || []} />
 
-          <OutlineGrid
-            title={lang === "bn" ? "কোর্স আউটলাইন" : "Course Outline"}
-            cards={outlineCards}
-          />
+          <SupportHighlight lang={lang} />
 
           <FAQSection
             title={lang === "bn" ? "প্রশ্নোত্তর (FAQ)" : "FAQ"}
             subtitle={
               lang === "bn"
-                ? "আরো কিছু জানতে চান? নিচের প্রশ্নগুলো দেখুন।"
+                ? "আরও কিছু জানতে চান? নিচের প্রশ্নগুলো দেখুন।"
                 : "Want to know more? Check the questions below."
             }
-            items={course.faqs[lang] || []}
+            items={course.faqs?.[lang] || []}
           />
+
           <PricingSection
-  lang={lang}
-  price={lang === "bn" ? "৳ ৪,৯৯৯" : "৳ 4,999"}
-  oldPrice={lang === "bn" ? "৳ ৬,৫০০" : "৳ 6,500"}
-  duration={lang === "bn" ? "১০ সপ্তাহ" : "10 weeks"}
-  seats={lang === "bn" ? "সীমিত" : "Limited"}
-/>
-           
+            lang={lang}
+            price={course.payment?.price?.[lang] || (lang === "bn" ? "৳ ৭,৯৯৯" : "৳ 7,999")}
+            oldPrice={course.payment?.oldPrice?.[lang] || (lang === "bn" ? "৳ ৬,৫০০" : "৳ 6,500")}
+            duration={course.payment?.duration?.[lang] || (lang === "bn" ? "১ মাস" : "1 Month")}
+            seats={lang === "bn" ? "সীমিত" : "Limited"}
+          />
 
           <CheckoutBox
             lang={lang}
-             slug={slug}
+            slug={slug}
             title={lang === "bn" ? "এখনই এনরোল করুন" : "Enroll Now"}
             subtitle={
               lang === "bn"

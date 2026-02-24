@@ -3,21 +3,21 @@ export default function SupportHighlight({ lang = "bn" }) {
     lang === "bn"
       ? {
           badge: "With Support",
-          title: "প্রিমিয়াম সাপোর্ট সহ কোর্স",
+          title: "রিডিং রাইটিং লিসেনিং এ থাকছে আমাদের ডিরেক্ট হেল্প",
           points: [
-            "প্র্যাকটিস চেক + টার্গেটেড ফিডব্যাক",
-            "কোর্স গাইডলাইন ও প্রশ্নোত্তর সাপোর্ট",
-            "মক টেস্ট রিভিউ + উন্নতির পরিকল্পনা",
+            " গত পাঁচ বছরে সাফল্যের সাথে ৫০০০+ শিক্ষার্থীকে ডুয়োলিংগো ইংলিশ টেস্টে ১৪৫ পর্যন্ত স্কোর করতে সাহায্য করেছি।", 
+            " আমাদের প্রত্যেক শিক্ষার্থীর সাকসেস্ফুল এক্সাম এর ভিডিও রয়েছে, যেখান থেকে পরবর্তী শিক্ষার্থীদের শেখানো হয় ।",
+            "অল্প সময়ের প্রিপারেশনেও ভালো স্কোর করার জন্য প্রয়োজনীয় দিকনির্দেশনা দেওয়া হবে।",
           ],
-          note: "এই সাপোর্ট সিস্টেমটি আপনাকে দ্রুত উন্নতি করতে সাহায্য করবে।",
+          note: "",
         }
       : {
           badge: "With Support",
-          title: "Premium Course Support Included",
+          title: "Direct support is provided in Reading, Writing, and Listening.",
           points: [
-            "Practice checking + targeted feedback",
-            "Guideline + Q&A support",
-            "Mock test review + improvement plan",
+            "Proper guidance will be provided to help you achieve a good score even with short preparation time.",
+            "Over the past five years, we have successfully helped 5,000+ students achieve scores of up to 145 in the Duolingo English Test.",
+            "We have successful exam videos of each of our students, which are used to guide and train future students.",
           ],
           note: "This support system helps you improve faster with clear direction.",
         };

@@ -10,75 +10,58 @@ export const COURSES = {
     },
     heroImage: "/images/det-full-course-support.png",
 
-    guideline: {
-      bn: [
-        "৪টি স্কিল কভার করবে (Reading/Writing/Listening/Speaking)",
-        "এক্সাম-স্টাইল প্র্যাকটিস + ফুল মক টেস্ট",
-        "ফিডব্যাক ও গাইডলাইন (With Support)",
-        "স্ট্রাকচার্ড সাপ্তাহিক রোডম্যাপ",
-      ],
-      en: [
-        "Covers all 4 skills (Reading/Writing/Listening/Speaking)",
-        "Exam-style practice + full mock tests",
-        "Feedback & guidance (With Support)",
-        "Structured weekly roadmap",
-      ],
-    },
 
-    outlineCards: [
-      {
-        title: { bn: "ক্লাস স্ট্রাকচার", en: "Class Structure" },
-        desc: { bn: "সাপ্তাহিক মডিউল + দৈনিক প্র্যাকটিস প্ল্যান।", en: "Weekly modules + daily practice plan." },
-      },
-      {
-        title: { bn: "রিডিং", en: "Reading" },
-        desc: { bn: "ভোকাবুলারি, স্কিমিং/স্ক্যানিং, টাইম ম্যানেজমেন্ট।", en: "Vocabulary, skimming/scanning, time management." },
-      },
-      {
-        title: { bn: "রাইটিং", en: "Writing" },
-        desc: { bn: "স্ট্রাকচার, আইডিয়া ডেভেলপমেন্ট, ভুল কমানো।", en: "Structure, idea development, reducing errors." },
-      },
-      {
-        title: { bn: "লিসেনিং", en: "Listening" },
-        desc: { bn: "ডিক্টেশন, নোট-টেকিং, স্পিড কন্ট্রোল।", en: "Dictation, note-taking, speed control." },
-      },
-      {
-        title: { bn: "স্পিকিং", en: "Speaking" },
-        desc: { bn: "ফ্লুয়েন্সি, প্রোনান্সিয়েশন, টেমপ্লেট প্র্যাকটিস।", en: "Fluency, pronunciation, template practice." },
-      },
-      {
-        title: { bn: "ফুল মক + ফিডব্যাক", en: "Full Mock + Feedback" },
-        desc: { bn: "মক টেস্ট + পারফরম্যান্স রিভিউ + উন্নতির পরিকল্পনা।", en: "Mock tests + performance review + improvement plan." },
-      },
-    ],
+// ✅ schedule cards (used on course page instead of outcomes)
+schedule: {
+  bn: [
+    { label: "Class Start", value: "March 1, 2026" },
+    { label: "Total Classes", value: "18 (Eighteen)" },
+    { label: "Class Day", value: "Friday, Sunday, Tuesday" },
+    { label: "Class Duration", value: "9:30 PM - 10:45 PM" },
+  ],
+  en: [
+    { label: "Class Start", value: "March 1, 2026" },
+    { label: "Total Classes", value: "18 (Eighteen)" },
+    { label: "Class Day", value: "Friday, Sunday, Tuesday" },
+    { label: "Class Duration", value: "9:30 PM - 10:45 PM" },
+  ],
+},
+
+
 
     faqs: {
-      bn: [
-        { q: "এই কোর্স কার জন্য?", a: "যারা Duolingo English Test (DET) দিতে চান এবং ৪টি স্কিলে ভালো করতে চান।" },
-        { q: "With Support বলতে কী বোঝায়?", a: "গাইডলাইন, ফিডব্যাক, প্র্যাকটিস চেক, এবং প্রয়োজনীয় দিকনির্দেশনা।" },
-        { q: "কোর্সে কি মক টেস্ট থাকবে?", a: "হ্যাঁ, থাকবে—এবং মক শেষে পারফরম্যান্স রিভিউও পাবেন।" },
-        { q: "ক্লাস না বুঝলে কী হবে?", a: "সাপোর্ট সিস্টেমের মাধ্যমে প্রশ্ন করতে পারবেন এবং গাইড পাবেন।" },
-      ],
-      en: [
-        { q: "Who is this course for?", a: "Anyone preparing for the Duolingo English Test and aiming to improve all 4 skills." },
-        { q: "What does “With Support” mean?", a: "Guidance, feedback, practice checking, and structured direction." },
-        { q: "Does it include mock tests?", a: "Yes. You’ll get mock tests and performance review after mocks." },
-        { q: "What if I get stuck?", a: "You can ask questions and get guidance through the support system." },
-      ],
-    },
-    payment: {
-  bkash: {
-    number: "01623978532",
-    type: "personal",
-  },
-  price: {
-    bn: "৳ ৭,৯৯৯",
-    en: "৳ 7,999",
-  },
-  duration: {
-    bn: "১ মাস",
-    en: "1 Month",
-  },
+  bn: [
+    { q: "পরীক্ষায় কীভাবে হেল্প করা হবে? ", a: "রিডিং, রাইটিং লিসেনিং এ সাপোর্ট দেওয়া হবে। আপনি শুনে লিখবেন। টিচার পাশের রুম থেকে আপনাকে সাপোর্ট দেবে। এর জন্য আমাদের নিজস্ব proven মেথড রয়েছে।" },
+    { q: "আপনারা কি পরীক্ষা টাইপিং করে দিতে পারেন?", a: "না, পরীক্ষায় অন্য কেউ টাইপিং করে দিতে পারে না। পরীক্ষার নিয়ম অনুযায়ী ক্যান্ডিডেটকে নিজের টাইপিং নিজেকেই করতে হয় অন্যথায় পরীক্ষা বাতিল হয়ে যাবে।" },
+    { q: "স্পিকিং সেকশনে  কেমন হেল্প  থাকবে?", a: "স্পিকিং এর জন্য প্রতি শনিবার রাত ১০টায় অনলাইনে ক্লাস নেওয়া হয়। প্রস্তুতির জন্য রিয়েল টেস্ট থেকে নেওয়া এবং আমাদের সফল ক্যান্ডিডেটদের (যারা ১২০, ১৩০, ১৪০ স্কোর করেছে) পরীক্ষার অভিজ্ঞতা ভিত্তিক ম্যাটেরিয়ালস পিডিএফ আকারে শেয়ার করা হয়, যাতে আপনারা পরীক্ষার স্পিকিং অংশের জন্য কার্যকরভাবে প্রস্তুতি নিতে পারেন। এছাড়াও আমাদের টিচারের সাথে মক টেস্ট দিয়ে আপনার বর্তমান স্পিকিং লেভেল যাচাই করার সুযোগ রয়েছে।" },
+    { q: "সাপোর্ট নেওয়ার কারণে পরীক্ষায় কোনো ধরনের প্রবলেম হতে পারে কি?", a: "না, কোনো ধরনের সমস্যা হওয়ার সম্ভাবনা নেই। পরীক্ষাটি ক্যান্ডিডেট নিজেই টাইপিং করে কমপ্লিট করে এবং পুরো প্রসেসটি খুবই Safe ওয়ে-তে এক্সিকিউট করা হয়। আমাদের টোটাল মেথড অনেক বেশি সিকিউর এবং প্রোভেন। পরীক্ষার আগে পুরো প্রসেস ক্যান্ডিডেটকে ক্লিয়ারভাবে এক্সপ্লেইন করে দেওয়া হয়, যাতে তিনি বুঝতে পারেন কোথায় কী করতে হবে।" },
+  ],
+  en: [
+    { q: "How will support be provided during the exam?", a: "Support will be provided in Reading, Writing, and Listening. You will write after listening. The teacher will guide you from the next room. We follow our own proven method for this process." },
+    { q: "Can you type the exam on behalf of the candidate?", a: "No. No one else can type the exam for the candidate. According to the exam rules, the candidate must complete their own typing; otherwise, the exam may be canceled." },
+    { q: "What kind of support is provided in the Speaking section?", a: "For Speaking, live online classes are held every Saturday at 10 PM. Preparation materials in PDF format are shared, collected from real tests and from our successful candidates who scored 120, 130, and 140. You can also take a mock test with our teacher to evaluate your current speaking level." },
+    { q: "Can taking support cause any problems in the exam?", a: "No, there is no possibility of any problem. The candidate completes the typing themselves, and the entire process is executed in a safe and secure way. Our total method is highly secure and proven. Before the exam, the complete process is clearly explained so the candidate understands exactly what to do." },
+  ],
 },
+
+    payment: {
+      bkash: {
+        number: "01623978532",
+        type: "personal",
+      },
+      price: {
+        bn: "৳ ৭,৯৯৯",
+        en: "৳ 7,999",
+      },
+      // optional old price (PricingSection supports it)
+      oldPrice: {
+        bn: "৳ ১২,০০০",
+        en: "৳ 12,000",
+      },
+      duration: {
+        bn: "১ মাস",
+        en: "1 Month",
+      },
+    },
   },
 };
